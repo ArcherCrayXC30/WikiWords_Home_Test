@@ -1,6 +1,42 @@
-# Getting Started with Create React App
+# Wiki Words Counter
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), using the [Redux](https://redux.js.org/) and [Redux Toolkit](https://redux-toolkit.js.org/) TS template.
+Hey!
+We’re happy to let you know that you passed the phone interview, so now we would like to get to know you better
+with a task.
+Summary
+Create a small web application that ranks the words on a given wikipedia topic
+Details
+1. Create a simple webpage using any framework or vanilla javascript.
+2. Create a search input for the search topic
+3. Call the Wiki API with the URL below
+   https://en.wikipedia.org/w/api.php?action=query&prop=extracts&format=json&exintro=&ti
+   tles=NASA&format=json&callback=callback
+   Extract the text from the response (from the “extract” property)
+4. In a table or list:
+
+   ● The text words (with ranks) sorted by occurence rank (descending order)
+
+   ● Ranks may have values from 1 to 5. Most common word has rank 5
+ 
+   ● Words with the same rank sorted alphanumerically by ascending order
+ 
+   ● Rank presented as number of stars - 5: *****, 4: ****, etc.
+ 
+   ● Note that we are not looking for the count of the words but word’s rank, meaning
+   for example that the highest appearance in the text should get 5 stars
+
+5. Make sure you have clean code and unit tests
+   Example
+`   Input text: “car bicycle car bicycle car bicycle car bicycle car bicycle car bicycle plane plane
+   truck”
+   Output:
+ 
+   Bicycle (+++++)
+   Car (+++++)
+   Plane (++)
+   Truck (+)
+6. `
+
 
 ## Available Scripts
 
@@ -11,14 +47,8 @@ In the project directory, you can run:
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
 ### `npm test`
-
 Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
 ### `npm run build`
 
 Builds the app for production to the `build` folder.\
@@ -27,20 +57,5 @@ It correctly bundles React in production mode and optimizes the build for the be
 The build is minified and the filenames include the hashes.\
 Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
 ### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
